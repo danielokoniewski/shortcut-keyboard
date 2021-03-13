@@ -6,6 +6,8 @@ Microcontrollers like ATmega32U4 are able to act as a keyboard. Therefore the pr
 
 Buttons are connected to GND and pins 7,8 and 9.
 
+![Layout](layout.png)
+
 
 ## Software
 The project uses a sketchboard in the Arduino IDE.
@@ -19,3 +21,4 @@ Since the board is no official arduino, the board setting should be set to Ardui
 + [Arduino Digital Pins](https://www.arduino.cc/en/Tutorial/Foundations/DigitalPins)
 + [ATmega32U4](https://www.pjrc.com/teensy/atmega32u4.pdf)
 + [arduino-cli](https://arduino.github.io/arduino-cli/latest/)
++ [Arduino Pro Micro](https://starthardware.org/arduino-pro-micro/)
