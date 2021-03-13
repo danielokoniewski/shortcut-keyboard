@@ -14,8 +14,8 @@ Since the board is no official arduino, the board setting should be set to Ardui
 
 
 ## Links
-[Arduino Keyboard](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/)
-[Keyboard Modifiers](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/keyboardmodifiers/)
-[Arduino Digital Pins](https://www.arduino.cc/en/Tutorial/Foundations/DigitalPins)
-[ATmega32U4](https://www.pjrc.com/teensy/atmega32u4.pdf)
-[arduino-cli](https://arduino.github.io/arduino-cli/latest/)
++ [Arduino Keyboard](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/)
++ [Keyboard Modifiers](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/keyboardmodifiers/)
++ [Arduino Digital Pins](https://www.arduino.cc/en/Tutorial/Foundations/DigitalPins)
++ [ATmega32U4](https://www.pjrc.com/teensy/atmega32u4.pdf)
++ [arduino-cli](https://arduino.github.io/arduino-cli/latest/)
