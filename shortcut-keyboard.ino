@@ -1,8 +1,14 @@
 #include<Keyboard.h>
+#include "KeyboardApplicationShortcuts.h"
 
 const int buttonCount = 3;
 int buttonPin[3] = {7,8,9};
 int previousButtonState[3] = {HIGH,HIGH,HIGH};
+int buttonAction[3] = {
+  SHORTCUT_DEFAULTS_GUI,
+  SHORTCUT_MSTEAMS_TOGGLE_MUTE,
+  SHORTCUT_MSTEAMS_GO_TO_SHARING_TOOLBAR
+};
 
 /*
 initialize the buttons and start acting as a keyboard
@@ -21,31 +27,8 @@ void setup() {
 press some buttons based on the 
 */
 void pressButtons(int keyId) {
-  switch(keyId) {
-    case 0:
-      //Keyboard.press(KEY_LEFT_GUI);
-      Keyboard.press(KEY_RETURN);
-      Keyboard.release(KEY_RETURN);;
-      break;
-   case 1:
-      Keyboard.press(KEY_LEFT_CTRL);
-      Keyboard.press(KEY_LEFT_SHIFT);
-      Keyboard.press('M');
-      Keyboard.releaseAll();
-      break;
-   case 2:
-      Keyboard.press(KEY_LEFT_GUI);
-      Keyboard.releaseAll();
-      delay(100);
-      Keyboard.print("Terminal");
-      Keyboard.press(KEY_LEFT_CTRL);
-      Keyboard.press(KEY_RETURN);
-      Keyboard.releaseAll();
-      
-      break;
-   default:
-     break;
-  }
+  int action = buttonAction[keyId];
+  KeyboardApplicationShortcuts::pressShortcut(action);
 }
 
 /*
@@ -55,8 +38,8 @@ void loop() {
   for ( int i = 0; i< buttonCount; i++) {
       int buttonState = digitalRead(buttonPin[i]);
       if ((buttonState != previousButtonState[i])  && (buttonState = HIGH)) {
-        pressButtons(i); 
-        delay(200);  
+        pressButtons(i);
+        delay(200);
       }
       previousButtonState[i] = buttonState;
   }
